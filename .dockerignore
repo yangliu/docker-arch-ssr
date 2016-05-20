@@ -1,0 +1,10 @@
+.vscode
+.git
+.DS_Store
+.gitignore
+update-ssr.sh
+envs
+systemd/
+
+# for dev
+tmp

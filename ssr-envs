@@ -1,0 +1,11 @@
+SSR_PASSWD="yourpasswd"
+SSR_TIMEOUT=120
+SSR_METHOD="chacha20"
+SSR_PROTOCOL="auth_sha1_compatible"
+SSR_PROTOCOL_PARAM=""
+SSR_OBFS="tls1.2_ticket_auth_compatible"
+SSR_OBFS_PARAM=""
+SSR_REDIRECT=""
+SSR_TCP_FAST_OPEN=false
+SSR_DNS_IPV6=false
+SSR_WORKERS=1

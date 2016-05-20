@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# create a configuration file based on envs
+cat > /root/ssr.json <<EOL
+{
+    "server":"0.0.0.0",
+    "server_port":8989,
+    "local_port":1080,
+    "password":$SSR_PASSWD,
+    "timeout":$SSR_TIMEOUT,
+    "method":$SSR_METHOD,
+    "protocol":$SSR_PROTOCOL,
+    "protocol_param": $SSR_PROTOCOL_PARAM,
+    "obfs": $SSR_OBFS,
+    "obfs_param": $SSR_OBFS_PARAM,
+    "redirect": $SSR_REDIRECT,
+    "fast_open": $SSR_TCP_FAST_OPEN,
+    "dns_ipv6": $SSR_DNS_IPV6,
+    "workers": $SSR_WORKERS
+}
+EOL
+
+# start the ssr
+/usr/bin/python2 /opt/shadowsocks/server.py -c /root/ssr.json

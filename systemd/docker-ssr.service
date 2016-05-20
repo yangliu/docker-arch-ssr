@@ -1,0 +1,12 @@
+[Unit]
+Description=Shadowsocks RSS Container
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/docker run --rm --env-file=/root/ssr-envs --name ssr_server -p 8989:8989 yangliu/arch-ssr   ⏎ master
+ExecStop=/usr/bin/docker stop -t 10 ssr_server
+
+[Install]
+WantedBy=multi-user.target
