@@ -2,5 +2,5 @@
 ssr docker image
 
 ## Usage
-- set envs
-- deploy with systemd
+- set envs;
+- deploy with systemd.
